@@ -6,6 +6,7 @@ import { handleAddJob, fetchJobs, handleDeleteJob } from "../src/jobFunctions";
 import Navbar from "./components/Navbar";
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
+import Dashboard from "./components/Dashboard";
 
 export default function Home() {
   const [user, setUser] = useState(null);
@@ -239,6 +240,7 @@ export default function Home() {
               <h2 className="text-3xl font-semibold text-center text-gray-800 mb-6">
                 Your Job Entries
               </h2>
+              <Dashboard />
               {filteredJobs.map((job) => (
                 <div
                   key={job.id}
